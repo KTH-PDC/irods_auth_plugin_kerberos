@@ -1,5 +1,6 @@
+PREFIX ?= /usr/local/irods
+
 BASEDIRS = krb
-           
 
 ######################################################################
 # Configuration should occur above this line
@@ -10,7 +11,7 @@ BASEDIRS = krb
 GCC = g++ -DRODS_SERVER 
 
 export OBJDIR = .objs
-export IRODSTOPDIR = ../../iRODS
+export IRODSTOPDIR = $(PREFIX)/iRODS
 export SOTOPDIR = .
 
 SUBS = ${BASEDIRS}
